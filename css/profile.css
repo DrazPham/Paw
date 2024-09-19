@@ -1,0 +1,62 @@
+body {
+    background: #f5f5f5;
+    margin-top: 20px;
+    font-family: 'Gaegu';
+}
+
+h2{
+    font-family: Jua;
+    margin-top: 100px;
+}
+
+.ui-w-80 {
+    width : 80px ;
+    height: auto;
+}
+
+
+.btn-outline-primary {
+    border-color:#d8b49a;
+    background  : #d8b49a;
+    color       : #d8b49a;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text-light {
+    color: #babbbc ;
+}
+
+
+.card {
+    background-clip: padding-box;
+    box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+.account-settings-fileinput {
+    position  : absolute;
+    visibility: hidden;
+    width     : 1px;
+    height    : 1px;
+    opacity   : 0;
+}
+
+.account-settings-links .list-group-item.active {
+    font-weight: bold #d8b49a;
+}
+
+
+
+.form-label{
+    font-weight: bold;
+}
+.form-group input{
+    color:rgba(0,0,0,0.5);
+    outline: none;
+}

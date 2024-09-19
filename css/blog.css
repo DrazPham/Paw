@@ -1,0 +1,105 @@
+.blog {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+}
+
+.blog-title {
+    font-size: 3rem;
+    font-family: 'Jua', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-form {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-form input,
+.post-form textarea {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.post-form button {
+    padding: 10px 20px;
+    background-color: #d8b49a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-form button:hover {
+    background-color: #b78c74;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-post {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    font-family: 'Jua', sans-serif;
+    padding: 1rem;
+}
+
+.post-excerpt {
+    padding: 0 1rem 1rem;
+}
+
+.read-more,
+.edit-post,
+.delete-post {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    background-color: #d8b49a;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.edit-post:hover,
+.delete-post:hover,
+.read-more:hover {
+    background-color: #b78c74;
+}
+
+.edit-post {
+    background-color: #4CAF50;
+}
+
+.delete-post {
+    background-color: #f44336;
+}

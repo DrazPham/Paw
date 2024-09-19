@@ -1,0 +1,210 @@
+@import "variables";
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#container {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 65px;
+}
+
+#fyp {
+    @include d-flex-row();
+    grid-column: 3/11;
+    height: 50px;
+    background-color: rgb(252, 244, 238);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    border-radius: 10px;
+
+    div {
+        width: 100%;
+        height: inherit;
+        @include d-flex-row();
+    }
+
+    div:hover {
+        background-color: rgba(1, 1, 1, 0.5);
+        border-radius: 10px;
+    }
+}
+
+#postprepare {
+    @include d-flex-col();
+    margin-top: 5px;
+    padding: 20px;
+    background-color: rgb(252, 244, 238);
+    border-radius: 10px;
+    grid-column: 3/11;
+    height: 100%;
+    justify-content: space-around;
+    gap: 15px;
+
+    #row_1 {
+        display: flex;
+        width: 100%;
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            height: 50px;
+            outline: none;
+            border: none;
+            margin-top: 5px;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+    }
+
+    #row_2 {
+        display: flex;
+        width: 100%;
+        justify-content: right;
+        gap: 10px;
+
+        #progress_container {
+            position: relative;
+            // @include d-flex-col;
+            width: 100%;
+            background-color: grey;
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+
+            span {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #progress_bar {
+                border-radius: 10px;
+                background-color: green;
+                height: 100%;
+                width: 0px;
+            }
+        }
+
+        #post {
+            background-color: #d8b49a;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: none;
+        }
+    }
+}
+
+#latestPosts {
+    margin-top: 20px;
+    grid-column: 3/11;
+
+    .postItems {
+        position: relative;
+        margin: 10px 0;
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        background-color: rgb(252, 244, 238);
+        border-radius: 10px;
+
+        .col_1 {
+            height: 100%;
+        }
+
+        .col_2 {
+            width: 100%;
+            margin: 5px 0 0 10px;
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .reaction {
+                @include d-flex-row;
+                justify-content: space-around;
+
+                .heartFull,
+                .bookmarkFull {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.avatar {
+    height: 48px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: url("/img/Cat-Avatar-icon.png");
+    background-size: contain;
+    background-position: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.userOptions {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.optionLists {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 30%;
+    list-style: none;
+    background-color: #d8b49a;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid black;
+    .editPosts{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom: 1px solid black;
+    }
+    .deletePosts{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    li{
+        padding: 5px 5px;
+        cursor: pointer;
+    }
+}
+
+.textInputDiv {
+    width: 100%;
+    position: relative;
+}
+
+.textInput {
+    width: 90%;
+    outline: none;
+    border: none;
+    background-color: #fcf4ee;
+    color: black;
+    padding: 5px;
+    position: relative;
+}
+
+.confirmEdit {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background-color: #d8b49a;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    display: none;
+}

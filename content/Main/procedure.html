@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/css/base.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+    <title>Paw</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <a href="home.html"><img src="/img/blacklogo.png" alt="logo"></a>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="/content/Main/home.html" class="link">Home</a></li>
+                <li><a href="#" class="link">Forum</a></li>
+                <li><a href="#" class="link">Blog</a></li>
+                <li><a href="#" class="link">Shop</a></li>
+                <li><a href="#" class="link">Game</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <!-- FORM -->
+    <div class="form-box">
+
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" id="signIn_email">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box" style="position: relative; height: 100%;">
+                <div>
+                    <input type="password" class="input-field" placeholder="Password" id="signIn_password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <i class="far fa-eye fa-eye-slash" id="togglePassword" style="cursor: pointer"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In" id="signIn_button">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+        <script> togglePassword = document.querySelector('#togglePassword');
+            const password = document.querySelector('#signIn_password ');
+
+            togglePassword.addEventListener('click', function (e) {
+                // toggle the type attribute
+                const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                // toggle the eye slash icon
+                this.classList.toggle('fa-eye-slash');
+            }); </script>
+
+
+        <div class="register-container" id="register">
+            <div class="top">
+                <br><br>
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Username" id="UsernameInput">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="UserID" id="UserIDInput">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" id="signUp_email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="signUp_password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <span id="noti"></span>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register" id=signUp_button>
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="group-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="/img/whitelogo.png" alt="Logo">
+                    </a>
+                    <p></p>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Contact</h2>
+                <p>Email: drazpham08@gmail.com</p>
+                <p>Email: cthphuong07@gmail.com</p>
+                <p>Email: nguyendduong07@gmail.com</p>
+            </div>
+            <div class="box">
+                <h2>Social Media</h2>
+                <div class="red-social">
+                    <!-- 1 -->
+                    <a href="https://www.facebook.com/draz.principe?locale=vi_VN">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/draz.principe?fbclid=IwY2xjawE2rIhleHRuA2FlbQIxMAABHfeyxxyDcFvPnGMRfDookTYRvoJYsu4JDsyKdJnmeCziLyO1xKpVg8yrhQ_aem_gQyZX6UPtRXdabG7EhCHrw">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a
+                        href="https://github.com/DrazPham?fbclid=IwY2xjawE2rJJleHRuA2FlbQIxMAABHY6HoSJ9CFAlCWbBYV855TEqE9kiUytGLauoPZqUa_kjGNfiF-iny7pgDg_aem_mdbFdN5SJZHhS1upAmyH7w">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+                <!-- 2 -->
+                <div class="red-social">
+                    <a href="https://www.facebook.com/fuong0107?locale=vi_VN">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/hfuongg._?fbclid=IwY2xjawE3Y8hleHRuA2FlbQIxMAABHdl9AuG2oEArcMdEWSKo0s0-AoPYK3iplxJOzOUm9jU7lbw7-JcgHBWzOg_aem_YSh2a-_dXeDSF1FCaQ594Q">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://github.com/phuong0107">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <!-- 3 -->
+                </div>
+                <div class="red-social">
+                    <a href="https://www.facebook.com/duongggdz">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ndd.609/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://github.com/SmalloCoolio">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="group-2">
+            <small>&copy; 2024 <b>Paw</b> - All Rights Reserved</small>
+        </div>
+    </footer>
+    <script src="/js/base.js"></script>
+    <script type="module" src="/js/procedure.js"></script>
+
+</body>
+
+</html>

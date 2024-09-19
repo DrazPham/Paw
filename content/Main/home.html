@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/home.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+  <title>Paw</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <a href="#">
+        <img src="/img/blacklogo.png" alt="logo">
+      </a>
+    </div>
+    <div class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="#" class="link" style="font-weight: bolder;">Home</a></li>
+        <li><a href="/content/Main/procedure.html" class="link">Forum</a></li>
+        <li><a href="/content/Main/procedure.html" class="link">Blog</a></li>
+        <li><a href="/content/Main/procedure.html" class="link">Shop</a></li>
+        <li><a href="/content/Main/procedure.html" class="link">Game</a></li>
+      </ul>
+    </div>
+    <div class="nav-button">
+      <a href="procedure.html"><button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button></a>
+    </div>
+    <div class="nav-menu-btn">
+      <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <div class="banner-row">
+      <div class="banner-col col1">
+        <h1>Paw</h1>
+        <p>Empower the meowgic</p>
+        <button type="button" onclick="{location.replace(`/content/Main/procedure.html`)}" id  = "startBtn">Start</button>
+      </div>
+      <div class="banner-col col2">
+        <div class="banner-card card1">      
+          <h5>Forum</h5>
+        </div>
+        <div class="banner-card card2">
+          <h5>Blog</h5>
+        </div>
+        <div class="banner-card card3">
+          <h5>Shop</h5>
+        </div>
+        <div class="banner-card card4">
+          <h5>Game</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+  <h1 style="text-align: center; font-family: Jua;">Meowwww</h1>
+
+  <div class="container">
+    
+    <div id="caroseul">
+      <input type="radio" name="slider" id="item-1" checked>
+      <input type="radio" name="slider" id="item-2">
+      <input type="radio" name="slider" id="item-3">
+      <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class="imageCaroseul">
+        </label>
+        <label class="card" for="item-2" id="song-2">
+          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class="imageCaroseul">
+        </label>
+        <label class="card" for="item-3" id="song-3">
+          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class="imageCaroseul">
+        </label>
+      </div>
+    </div>
+
+    <div id="introduction">
+      <div id="donation">
+        <h1>Small changes make big differences</h1>
+      </div>
+      <div class="donation">
+        <div class="box">
+          <a
+            href="https://secure.aspca.org/donate/donate?ms=wb_lpf_orange-donate&initialms=wb_lpf_orange-donate&pcode=WEBMEMBER&lpcode=WEBGUARD&_gl=1*98d6kc*_gcl_au*MTk3MzEyNTA0NS4xNzIzODk1MTYx">
+            <div class="helpingChoices">
+              <i class="bi bi-currency-dollar"></i>
+              <h3>Donation</h3>
+              <p>Every dollar can make a difference for an animal in need. Join the ASPCA by making a gift today.</p>
+            </div>
+          </a>
+
+        </div>
+
+
+        <div class="box">
+          <a
+            href="https://www.aspca.org/get-involved/advocacy-center?ms=wb_lpf_homepage-white-2023&initialms=wb_lpf_homepage-white-2023">
+            <div class="helpingChoices">
+              <i class="bi bi-megaphone-fill"></i>
+              <h3>Advocacy</h3>
+              <p>Speak up for animals and learn how to be a strong, effective advocate.</p>
+            </div>
+          </a>
+
+        </div>
+        <div class="box">
+          <a
+            href="https://secure.aspca.org/donate/join?ms=wb_lpf_blue-monthly&initialms=wb_lpf_blue-monthly&pcode=WEBGUARD&lpcode=WEBMEMBER&_gl=1*98d6kc*_gcl_au*MTk3MzEyNTA0NS4xNzIzODk1MTYx">
+            <div class="helpingChoices">
+              <i class="bi bi-calendar-check"></i>
+              <h3>Monthly Donation</h3>
+              <p>Monthly giving is the easiest and most effiecent way to mak a difference for animals</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="group-1">
+      <div class="box">
+        <figure>
+          <a href="#">
+            <img src="/img/whitelogo.png" alt="Logo">
+          </a>
+          <p></p>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>Contact</h2>
+        <p>Email: drazpham08@gmail.com</p>
+        <p>Email: cthphuong07@gmail.com</p>
+        <p>Email: nguyendduong07@gmail.com</p>
+      </div>
+      <div class="box">
+        <h2>Social Media</h2>
+        <div class="red-social">
+          <!-- 1 -->
+          <a href="https://www.facebook.com/draz.principe?locale=vi_VN">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/draz.principe?fbclid=IwY2xjawE2rIhleHRuA2FlbQIxMAABHfeyxxyDcFvPnGMRfDookTYRvoJYsu4JDsyKdJnmeCziLyO1xKpVg8yrhQ_aem_gQyZX6UPtRXdabG7EhCHrw">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/DrazPham?fbclid=IwY2xjawE2rJJleHRuA2FlbQIxMAABHY6HoSJ9CFAlCWbBYV855TEqE9kiUytGLauoPZqUa_kjGNfiF-iny7pgDg_aem_mdbFdN5SJZHhS1upAmyH7w">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        <!-- 2 -->
+        <div class="red-social">
+          <a href="https://www.facebook.com/fuong0107?locale=vi_VN">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/hfuongg._?fbclid=IwY2xjawE3Y8hleHRuA2FlbQIxMAABHdl9AuG2oEArcMdEWSKo0s0-AoPYK3iplxJOzOUm9jU7lbw7-JcgHBWzOg_aem_YSh2a-_dXeDSF1FCaQ594Q">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/phuong0107">
+            <i class="bi bi-github"></i>
+          </a>
+        <!-- 3 -->
+        </div><div class="red-social">
+          <a href="https://www.facebook.com/duongggdz">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/ndd.609/">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/SmalloCoolio">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="group-2">
+      <small>&copy; 2024 <b>Paw</b> - All Rights Reserved</small>
+    </div>
+  </footer>
+  <script src="/js/home.js"></script>
+
+</body>
+
+</html>

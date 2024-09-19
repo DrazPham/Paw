@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/home.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+  <title>Paw</title>
+</head>
+<script type = "module"src = "/js/checkState.js"></script>
+<script type = "text/javascript"src = "/js/preventBack.js"></script>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <a href="#">
+        <img src="/img/blacklogo.png" alt="logo">
+      </a>
+    </div>
+    <div class="nav-menu" id="navMenu">
+      <ul>
+        <li><a href="#" class="link" style="font-weight: bold;">Home</a></li>
+        <li><a href="/content/User/user-forum.html" class="link">Forum</a></li>
+        <li><a href="/content/User/user-blog.html" class="link">Blog</a></li>
+        <li><a href="/content/User/user-shop.html" class="link">Shop</a></li>
+        <li><a href="/content/User/user-game.html" class="link">Game</a></li>
+      </ul>
+    </div>
+    <div class="nav-user">
+      <div id="avatar">
+        <ul id="userOptions">
+          <a href="/content/User/user-profile.html">
+            <i class="fa-regular fa-user" style="background: none; color: black;"></i>
+            <li>Profile</li>
+          </a>
+          <a href="/content/Main/home.html">
+            <i class="fa-solid fa-arrow-right-from-bracket" style="background: none; color: black;"></i>
+            <li>Log out</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-menu-btn">
+        <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="caroseul">
+      <input type="radio" name="slider" id="item-1" checked>
+      <input type="radio" name="slider" id="item-2">
+      <input type="radio" name="slider" id="item-3">
+      <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class = "imageCaroseul">
+        </label>
+        <label class="card" for="item-2" id="song-2">
+          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class = "imageCaroseul">
+        </label>
+        <label class="card" for="item-3" id="song-3">
+          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class = "imageCaroseul">
+        </label>
+      </div>
+    </div>
+    <div id="breed">
+      <h1 style="text-align: center;">Raise your cat!</h1>
+      <canvas id ="canvas"></canvas>
+      <div id = "progress_container">
+        <div id = "progress_bar">
+        </div>
+      </div>
+      <div id = "lower_part">
+        <div id = "countdownContainer">
+          <h1>Countdown Timer</h1>
+          <div id="timer">00:00:00</div>
+        </div>
+        <div id = "levelContainer">
+          <h1>Level</h1>
+          <div id = "levelDisplaying"></div>
+        </div>
+        <button id = "btn"></button>
+      </div>
+    </div>
+  </div>
+
+    <!-- FOOTER -->
+      <footer class="footer">
+    <div class="group-1">
+      <div class="box">
+        <figure>
+          <a href="#">
+            <img src="/img/whitelogo.png" alt="Logo">
+          </a>
+          <p></p>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>Contact</h2>
+        <p>Email: drazpham08@gmail.com</p>
+        <p>Email: cthphuong07@gmail.com</p>
+        <p>Email: nguyendduong07@gmail.com</p>
+      </div>
+      <div class="box">
+        <h2>Social Media</h2>
+        <div class="red-social">
+          <!-- 1 -->
+          <a href="https://www.facebook.com/draz.principe?locale=vi_VN">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/draz.principe?fbclid=IwY2xjawE2rIhleHRuA2FlbQIxMAABHfeyxxyDcFvPnGMRfDookTYRvoJYsu4JDsyKdJnmeCziLyO1xKpVg8yrhQ_aem_gQyZX6UPtRXdabG7EhCHrw">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/DrazPham?fbclid=IwY2xjawE2rJJleHRuA2FlbQIxMAABHY6HoSJ9CFAlCWbBYV855TEqE9kiUytGLauoPZqUa_kjGNfiF-iny7pgDg_aem_mdbFdN5SJZHhS1upAmyH7w">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        <!-- 2 -->
+        <div class="red-social">
+          <a href="https://www.facebook.com/fuong0107?locale=vi_VN">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/hfuongg._?fbclid=IwY2xjawE3Y8hleHRuA2FlbQIxMAABHdl9AuG2oEArcMdEWSKo0s0-AoPYK3iplxJOzOUm9jU7lbw7-JcgHBWzOg_aem_YSh2a-_dXeDSF1FCaQ594Q">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/phuong0107">
+            <i class="bi bi-github"></i>
+          </a>
+        <!-- 3 -->
+        </div><div class="red-social">
+          <a href="https://www.facebook.com/duongggdz">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/ndd.609/">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/SmalloCoolio">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="group-2">
+      <small>&copy; 2024 <b>Paw</b> - All Rights Reserved</small>
+    </div>
+  </footer>
+    <script  src="/js/home.js"></script>
+</body>
+
+</html>

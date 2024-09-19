@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "Cute Cat",
+        "price": 200,
+        "image": "${index + 1}"
+    },
+    {
+        "id": 2,
+        "name":"Just Cat",
+        "price": 250,
+        "image": "image/2.png"
+    },
+    {
+        "id": 3,
+        "name":"Pookie Cat",
+        "price": 290,
+        "image": "image/3.png"
+    },
+    {
+        "id": 4,
+        "name":"Extra Big Cat",
+        "price": 200,
+        "image": "image/4.png"
+    },
+    {
+        "id": 5,
+        "name":"Big Cat",
+        "price": 300,
+        "image": "image/5.png"
+    },
+    {
+        "id": 6,
+        "name":"Small Cat",
+        "price": 200,
+        "image": "image/6.png"
+    },
+    {
+        "id": 7,
+        "name":"Weird Cat",
+        "price": 200,
+        "image": "image/7.png"
+    },
+    {
+        "id": 8,
+        "name":"Beautiful Cat",
+        "price": 200,
+        "image": "image/8.png"
+    }
+
+]

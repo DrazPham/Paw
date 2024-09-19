@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <title>Paw</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/shop2.css">
+
+
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    </head>
+</head>
+<body >
+        <!-- Navbar -->
+        <nav class="nav">
+          <div class="nav-logo">
+            <a href="/content/Admin/admin-home.html">
+              <img src="/img/blacklogo.png" alt="logo">
+            </a>
+          </div>
+          <div class="nav-menu" id="navMenu">
+            <ul>
+              <li><a href="/content/Admin/admin-home.html" class="link">Home</a></li>
+              <li><a href="/content/Admin/admin-forum.html" class="link">Forum</a></li>
+              <li><a href="/content/Admin/admin-blog.html" class="link">Blog</a></li>
+              <li><a href="#" class="link" style="font-weight: bold;">Shop</a></li>
+              <li><a href="/content/Admin/admin-game.html" class="link">Game</a></li>
+            </ul>
+          </div>
+          <div class="nav-menu-btn">
+              <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+          </div>
+          <header>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+        </header>
+        </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Best Selling Cats!</h1>
+        </div>
+        <div class="listProduct">
+
+        </div>
+
+    </div>
+
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+            <!-- New Button for removing all items -->
+            <button class="removeAll">Remove All</button>
+            <!-- New div to show the total price -->
+            <div class="totalPriceCart">Total Price: $0</div>
+        </div>
+        
+        <!-- Notification for "Order Completed!" -->
+        <div class="notification" style="display: none;">Order completed!</div>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="group-1">
+          <div class="box">
+            <figure>
+              <a href="/content/Admin/admin-home.html">
+                <img src="/img/whitelogo.png" alt="Logo">
+              </a>
+              <p></p>
+            </figure>
+          </div>
+          <div class="box">
+            <h2>Contact</h2>
+            <p>Email: drazpham08@gmail.com</p>
+            <p>Email: cthphuong07@gmail.com</p>
+            <p>Email: nguyendduong07@gmail.com</p>
+          </div>
+          <div class="box">
+            <h2>Social Media</h2>
+            <div class="red-social">
+              <!-- 1 -->
+              <a href="https://www.facebook.com/draz.principe?locale=vi_VN">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/draz.principe?fbclid=IwY2xjawE2rIhleHRuA2FlbQIxMAABHfeyxxyDcFvPnGMRfDookTYRvoJYsu4JDsyKdJnmeCziLyO1xKpVg8yrhQ_aem_gQyZX6UPtRXdabG7EhCHrw">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://github.com/DrazPham?fbclid=IwY2xjawE2rJJleHRuA2FlbQIxMAABHY6HoSJ9CFAlCWbBYV855TEqE9kiUytGLauoPZqUa_kjGNfiF-iny7pgDg_aem_mdbFdN5SJZHhS1upAmyH7w">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+            <!-- 2 -->
+            <div class="red-social">
+              <a href="https://www.facebook.com/fuong0107?locale=vi_VN">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/hfuongg._?fbclid=IwY2xjawE3Y8hleHRuA2FlbQIxMAABHdl9AuG2oEArcMdEWSKo0s0-AoPYK3iplxJOzOUm9jU7lbw7-JcgHBWzOg_aem_YSh2a-_dXeDSF1FCaQ594Q">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://github.com/phuong0107">
+                <i class="bi bi-github"></i>
+              </a>
+            <!-- 3 -->
+            </div><div class="red-social">
+              <a href="https://www.facebook.com/duongggdz">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/ndd.609/">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://github.com/SmalloCoolio">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="group-2">
+          <small>&copy; 2024 <b>Paw</b> - All Rights Reserved</small>
+        </div>
+      </footer>
+        <script src="/js/shop.js"></script>
+        <script src="/js/shop2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!--Website: wwww.codingdung.com-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw</title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <a href="/content/User/user-home.html">
+                <img src="/img/blacklogo.png" alt="logo">
+            </a>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="/content/User/user-home.html" class="link">Home</a></li>
+                <li><a href="/content/User/user-forum.html" class="link">Forum</a></li>
+                <li><a href="/content/User/user-blog.html" class="link">Blog</a></li>
+                <li><a href="/content/User/user-shop.html" class="link">Shop</a></li>
+                <li><a href="/content/User/user-game.html" class="link">Game</a></li>
+            </ul>
+        </div>
+        <div class="nav-user">
+            <div id="avatar">
+                <ul id="userOptions">
+                    <a href="/content/User/user-profile.html">
+                        <i class="fa-regular fa-user" style="background: none; color: black;"></i>
+                        <li>Profile</li>
+                    </a>
+                    <a href="/content/Main/home.html">
+                        <i class="fa-solid fa-arrow-right-from-bracket" style="background: none; color: black;"></i>
+                        <li>Log out</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+    <div class="container light-style flex-grow-1 container-p-y">
+        <h2 class="font-weight-bold py-3 mb-4" style="text-align: center;">
+            User Profile
+        </h2>
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">General</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password">Change password</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info">Info</a>
+                        <!-- <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-social-links">Social links</a> -->
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="tab-content">
+
+
+                        <div class="tab-pane fade active show" id="account-general">
+                            <hr class="border-light m-0">
+
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control mb-1 inputSpace" value="abc"
+                                        id="usernameInput">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">UserID</label>
+                                    <input type="text" class="form-control inputSpace" value="Abc" id="userIDInput">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">E-mail</label>
+                                    <input type="text" class="form-control mb-1 inputSpace" value="abc@mail.com"
+                                        id="emailInput">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Role</label>
+                                    <input type="text" class="form-control" disabled id="Role"
+                                        style="background-color: transparent;" value="User">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Current password</label>
+                                    <input type="text" class="form-control" disabled id="currentPasswordInput"
+                                        style="background-color: transparent;">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">New password</label>
+                                    <input type="text" class="form-control inputSpace" id="passwordInput">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Repeat new password</label>
+                                    <input type="text" class="form-control" id="passwordInputCheck">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Biographic</label>
+                                    <textarea class="form-control inputSpace" id="bioInput" rows="5"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Birthday</label>
+                                    <input type="date" class="form-control inputSpace" value="" id="birthdayInput">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Country</label>
+                                    <select class="custom-select">
+                                        <option selected>Vietnam</option>
+                                        <option>USA</option>
+                                        <option>Germany</option>
+                                        <option>France</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <!-- <h6 class="mb-4">Contacts</h6> -->
+                                <div class="form-group">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" class="form-control inputSpace" id="phoneInput"
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{11}" inputmode="numeric"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- <div class="tab-pane fade" id="account-social-links">
+                            <div class="card-body pb-2">
+
+                                <div class="form-group">
+                                    <label class="form-label">Facebook</label>
+                                    <input type="text" class="form-control" value="https://www.facebook.com/abc">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="form-label">Instagram</label>
+                                    <input type="text" class="form-control" value="https://www.instagram.com/abc">
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right mt-3">
+            <button type="button" class="btn" id="saveChange">Save changes</button>&nbsp;
+            <!-- <button type="button" class="btn btn-default">Cancel</button> -->
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="group-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="/img/whitelogo.png" alt="Logo">
+                    </a>
+                    <p></p>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Contact</h2>
+                <p>Email: drazpham08@gmail.com</p>
+                <p>Email: cthphuong07@gmail.com</p>
+                <p>Email: nguyendduong07@gmail.com</p>
+            </div>
+            <div class="box">
+                <h2>Social Media</h2>
+                <div class="red-social">
+                    <!-- 1 -->
+                    <a href="https://www.facebook.com/draz.principe?locale=vi_VN">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/draz.principe?fbclid=IwY2xjawE2rIhleHRuA2FlbQIxMAABHfeyxxyDcFvPnGMRfDookTYRvoJYsu4JDsyKdJnmeCziLyO1xKpVg8yrhQ_aem_gQyZX6UPtRXdabG7EhCHrw">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a
+                        href="https://github.com/DrazPham?fbclid=IwY2xjawE2rJJleHRuA2FlbQIxMAABHY6HoSJ9CFAlCWbBYV855TEqE9kiUytGLauoPZqUa_kjGNfiF-iny7pgDg_aem_mdbFdN5SJZHhS1upAmyH7w">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+                <!-- 2 -->
+                <div class="red-social">
+                    <a href="https://www.facebook.com/fuong0107?locale=vi_VN">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/hfuongg._?fbclid=IwY2xjawE3Y8hleHRuA2FlbQIxMAABHdl9AuG2oEArcMdEWSKo0s0-AoPYK3iplxJOzOUm9jU7lbw7-JcgHBWzOg_aem_YSh2a-_dXeDSF1FCaQ594Q">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://github.com/phuong0107">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <!-- 3 -->
+                </div>
+                <div class="red-social">
+                    <a href="https://www.facebook.com/duongggdz">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ndd.609/">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://github.com/SmalloCoolio">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="group-2">
+            <small>&copy; 2024 <b>Paw</b> - All Rights Reserved</small>
+        </div>
+    </footer>
+    <script src="/js/profile.js" type="module"></script>
+
+</body>
+
+</html>

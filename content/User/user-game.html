@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/game.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+    <title>Paw</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="nav-logo">
+        <a href="/content/User/user-home.html">
+          <img src="/img/blacklogo.png" alt="logo">
+        </a>
+      </div>
+      <div class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="/content/User/user-home.html" class="link" >Home</a></li>
+          <li><a href="/content/User/user-forum.html" class="link">Forum</a></li>
+          <li><a href="/content/User/user-blog.html" class="link">Blog</a></li>
+          <li><a href="/content/User/user-shop.html" class="link" >Shop</a></li>
+          <li><a href="#" class="link" style="font-weight: bold;">Game</a></li>
+        </ul>
+      </div>
+      <div class="nav-user">
+        <div id="avatar">
+          <ul id="userOptions">
+            <a href="/content/User/user-profile.html">
+              <i class="fa-regular fa-user" style="background: none; color: black;"></i>
+              <li>Profile</li>
+            </a>
+            <a href="/content/Main/home.html">
+              <i class="fa-solid fa-arrow-right-from-bracket" style="background: none; color: black;"></i>
+              <li>Log out</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-menu-btn">
+          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+
+    <section id="gameContainer">
+        <div id="Caro">
+            <h1>Tic Tac Toe</h1>
+            <div id ="caroGame">
+                <div class="boxGame" id ="0"></div>
+                <div class="boxGame" id ="1"></div>
+                <div class="boxGame" id ="2"></div>
+                <div class="boxGame" id ="3"></div>
+                <div class="boxGame" id ="4"></div>
+                <div class="boxGame" id ="5"></div>
+                <div class="boxGame" id ="6"></div>
+                <div class="boxGame" id ="7"></div>
+                <div class="boxGame" id ="8"></div>
+            </div>
+            <button id ="replay">REPLAY GAME</button>
+            
+        </div>
+
+        <div id="flipCard">
+            <h1>Flip Card</h1>
+            <div id="mainContainer">
+                <div class = "cardContainer">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+                <div class = "cardContainer">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+                <div class = "cardContainer">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+                <div class = "cardContainer">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+                <div class = "cardContainer">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+                <div class = "cardContainer">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+                <div class = "cardContainer">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+                <div class = "cardContainer">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+            </div>
+            <button id ="replayFlip">REPLAY GAME</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+      <footer class="footer">
+    <div class="group-1">
+      <div class="box">
+        <figure>
+          <a href="/content/User/user-home.html">
+            <img src="/img/whitelogo.png" alt="Logo">
+          </a>
+          <p></p>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>Contact</h2>
+        <p>Email: drazpham08@gmail.com</p>
+        <p>Email: cthphuong07@gmail.com</p>
+        <p>Email: nguyendduong07@gmail.com</p>
+      </div>
+      <div class="box">
+        <h2>Social Media</h2>
+        <div class="red-social">
+          <!-- 1 -->
+          <a href="https://www.facebook.com/draz.principe?locale=vi_VN">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/draz.principe?fbclid=IwY2xjawE2rIhleHRuA2FlbQIxMAABHfeyxxyDcFvPnGMRfDookTYRvoJYsu4JDsyKdJnmeCziLyO1xKpVg8yrhQ_aem_gQyZX6UPtRXdabG7EhCHrw">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/DrazPham?fbclid=IwY2xjawE2rJJleHRuA2FlbQIxMAABHY6HoSJ9CFAlCWbBYV855TEqE9kiUytGLauoPZqUa_kjGNfiF-iny7pgDg_aem_mdbFdN5SJZHhS1upAmyH7w">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        <!-- 2 -->
+        <div class="red-social">
+          <a href="https://www.facebook.com/fuong0107?locale=vi_VN">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/hfuongg._?fbclid=IwY2xjawE3Y8hleHRuA2FlbQIxMAABHdl9AuG2oEArcMdEWSKo0s0-AoPYK3iplxJOzOUm9jU7lbw7-JcgHBWzOg_aem_YSh2a-_dXeDSF1FCaQ594Q">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/phuong0107">
+            <i class="bi bi-github"></i>
+          </a>
+        <!-- 3 -->
+        </div><div class="red-social">
+          <a href="https://www.facebook.com/duongggdz">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/ndd.609/">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://github.com/SmalloCoolio">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="group-2">
+      <small>&copy; 2024 <b>Paw</b> - All Rights Reserved</small>
+    </div>
+  </footer>
+    <script src="/js/game.js"></script>
+</body>
+
+</html>
