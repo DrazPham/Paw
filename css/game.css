@@ -112,3 +112,8 @@
   margin: 15px auto;
   font-weight: bold;
 }/*# sourceMappingURL=game.css.map */
+
+
+.boxGame,.cardContainer,.front:hover{
+  cursor:url("/img/cursorHover.png"), pointer !important;
+}

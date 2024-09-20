@@ -26,7 +26,7 @@
   <nav class="nav">
     <div class="nav-logo">
         <a href="/content/User/user-home.html">
-            <img src="/img/blacklogo.png" alt="logo">
+          <img src="/img/blacklogo.png" alt="logo" class = "nav-logo-img">
         </a>
     </div>
     <div class="nav-menu" id="navMenu">
@@ -36,6 +36,8 @@
             <li><a href="#" class="link" style="font-weight: bold;">Blog</a></li>
             <li><a href="/content/User/user-shop.html" class="link">Shop</a></li>
             <li><a href="/content/User/user-game.html" class="link" >Game</a></li>
+            <li><a href="/content/User/user-profile.html" class="link responsiveTab">Profile</a></li>
+            <li><a href="/index.html" class="link responsiveTab">Log out</a></li>
         </ul>
     </div>
     <div class="nav-user">
@@ -45,7 +47,7 @@
                   <i class="fa-regular fa-user" style="background: none; color: black;"></i>
                     <li>Profile</li>
                 </a>
-                <a href="/content/Main/home.html">
+                <a href="/index.html">
                   <i class="fa-solid fa-arrow-right-from-bracket" style="background: none; color: black;"></i>
                   <li>Log out</li>
                 </a>
@@ -56,16 +58,20 @@
         <i class="bx bx-menu" onclick="myMenuFunction()"></i>
     </div>
 </nav>
-
-    <h1>Paw User Blog</h1>
-    <div class="blog-grid" id="blogGrid"></div>
+    <section class="blog">
+      <div class="container">
+          <h1 class="blog-title">Welcome to Paw Blog!</h1>
+          <div class="blog-grid" id="blogGrid">
+          </div>
+      </div>
+  </section>
 
     <footer class="footer">
       <div class="group-1">
         <div class="box">
           <figure>
             <a href="/content/User/user-home.html">
-              <img src="/img/whitelogo.png" alt="Logo">
+              <img src="/img/whitelogo.png" alt="logo" class = "nav-logo-img">
             </a>
             <p></p>
           </figure>
@@ -119,7 +125,7 @@
         <small>&copy; 2024 <b>Paw</b> - All Rights Reserved</small>
       </div>
     </footer>
-
+    <script src="/js/base.js"></script>
     <script type="module" src="/js/blog-user.js"></script> 
 </body>
 </html>

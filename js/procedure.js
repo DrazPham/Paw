@@ -105,7 +105,6 @@ signIn_button.addEventListener("click", () => {
             const user = userCredential.user;
             if (role == "admin"){
                 location.replace("/content/Admin/admin-home.html");
-                console.log("error");
             }
             else
                 location.replace("/content/User/user-home.html");

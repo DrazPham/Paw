@@ -39,7 +39,7 @@ var grow = 0;
 let xPosition = CANVAS_WIDTH; // Start from the right side of the canvas
 
 
-//FUNCTION
+//DRAW IMAGE
 function animate() {
     let move = Math.random() * 10 + 3;
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -57,89 +57,61 @@ function animate() {
 }
 animate();
 
-
-function startTimer() {
-    const now = new Date();
-    const midnight = new Date();
-    midnight.setHours(24, 0, 0, 0); // Set to midnight
-
-    const remainingTime = midnight - now;
-    let timer = Math.floor(remainingTime / 1000);
-    
-    const interval = setInterval(function () {
-        let hours = Math.floor(timer / 3600);
-        let minutes = Math.floor((timer % 3600) / 60);
-        let seconds = timer % 60;
-
-        hours = hours < 10 ? "0" + hours : hours;
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        document.getElementById('timer').textContent = hours + ":" + minutes + ":" + seconds;
-        
-        if (timer <= 0) {
-            clearInterval(interval);
-            updateDoc(doc(db, "users", uid), {
-                checkBreed: true,
-            });
-            btn.disabled = false;
-            // Restart the timer for the next day
-            startTimer();
-        }
-        timer--;
-    }, 1000);
-
-    // Check for date change every minute
-    setInterval(function () {
-        const currentDate = new Date();
-        if (currentDate.getDate() !== now.getDate()) {
-            updateDoc(doc(db, "users", uid), {
-                checkBreed: true,
-            });
-            btn.disabled = false;
-            // Restart the timer for the next day
-            startTimer();
-        }
-    }, 60000); // 60000 ms = 1 minute
-}
-
-
-
-window.onload = startTimer;
-console.log(timer);
-// btn.disabled= false;
+///CHECK USER INFO
 onAuthStateChanged(auth, async (user) => {
     if (user) {
         //GET DATA
         const uid = user.uid;
-        // updateDoc(doc(db, "users", uid), {
-        //     checkBreed: true,
-        //     level:1,
-        //     levelTracking:0
-        // });
         const docRef = doc(db, "users", uid);        
         const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-            const data = docSnap.data();
-            console.log(data);
-        } else {
-            console.log("No such document!");
-        }
         const data = docSnap.data();
-        
+
+        //SET LOCAL STORAGE
         localStorage.setItem("Username",data.Username);
         localStorage.setItem("UserID",data.UserID);
         localStorage.setItem("UserData",JSON.stringify(data));
 
-        //BUTTON CHECK
+        //TIMER
+        function startTimer(){
+        const now = new Date();
+        const midnight = new Date();
+        midnight.setHours(24, 0, 0, 0); // Set to midnight
+        const remainingTime = midnight - now;
+        let timer = Math.floor(remainingTime / 1000);
+        const interval = setInterval(function () {
+            let hours = Math.floor(timer / 3600);
+            let minutes = Math.floor((timer % 3600) / 60);
+            let seconds = timer % 60;
+    
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+            document.getElementById('timer').textContent = hours + ":" + minutes + ":" + seconds;
+            
+            if (timer <= 0) {
+                updateDoc(doc(db, "users", uid), {
+                    checkBreed: true,
+                });
+                btn.style.backgroundColor = "#d8b49a";
+                btn.disabled= false;
+                clearInterval(interval);
+                // Restart the timer for the next day
+                startTimer();
+            }
+            timer--;
+        }, 1000);
+        }
+        startTimer();
+
+    
+        //BUTTON COLOR
         if (data.checkBreed == true)
             btn.style.backgroundColor = "#d8b49a";
         else btn.style.backgroundColor = "gray";
-
+        //BAR LEVEL COLOR
         let currentLev = data.level;
         let levelTracking = data.levelTracking;
-
-
         //DEFINE PROGRESS
         progress_bar.style.width = `${levelTracking}%`;
         if (levelTracking <= 25)
@@ -152,16 +124,11 @@ onAuthStateChanged(auth, async (user) => {
             progress_bar.style.backgroundColor = "green";
         levelDisplaying.innerHTML = `${currentLev}`
 
-
         //BREED
-        btn.addEventListener("click", () => {
-            
+        btn.addEventListener("click", async () => {
             if (data.checkBreed == true) {
                 grow += 1;
-                console.log(grow);
-                
                 levelTracking += (100 / (levelArr[currentLev] + 1))
-                
                 progress_bar.style.width = `${levelTracking}%`;
                 if (levelTracking <= 25)
                     progress_bar.style.backgroundColor = "red";
@@ -180,19 +147,15 @@ onAuthStateChanged(auth, async (user) => {
                     progress_bar.style.width = `0%`;
                     levelTracking = 0;
                 }
-                console.log(levelTracking);
-
-                updateDoc(doc(db, "users", uid), {
+                await updateDoc(doc(db, "users", uid), {
                     level: currentLev,
                     levelTracking: levelTracking,
                     checkBreed: false
                 });
-
                 btn.style.backgroundColor = "gray";
                 btn.disabled = true;
             }
         })
-
     }
 });
 

@@ -88,9 +88,6 @@ a {
     background: #d8b49a;
 }
 
-.nav-menu-btn {
-    display: none;
-}
 
 
 
@@ -164,6 +161,11 @@ a {
 @media (max-width:900px) {
     .banner-card {
         height: 80%;
+    }
+}
+@media (max-width:900px) {
+    .banner-card {
+        display: none;
     }
 }
 
@@ -360,7 +362,6 @@ input[type=radio] {
 
 
 .donation {
-    max-width: 1100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -404,13 +405,6 @@ input[type=radio] {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #fff;
-}
-
-.box p {
-    text-align: center;
-    margin-top: 8px;
-    font-size: 16px;
-    font-weight: 400;
 }
 
 .box h3{

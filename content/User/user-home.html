@@ -30,7 +30,7 @@
   <nav class="nav">
     <div class="nav-logo">
       <a href="#">
-        <img src="/img/blacklogo.png" alt="logo">
+        <img src="/img/blacklogo.png" alt="logo" class = "nav-logo-img">
       </a>
     </div>
     <div class="nav-menu" id="navMenu">
@@ -40,6 +40,8 @@
         <li><a href="/content/User/user-blog.html" class="link">Blog</a></li>
         <li><a href="/content/User/user-shop.html" class="link">Shop</a></li>
         <li><a href="/content/User/user-game.html" class="link">Game</a></li>
+        <li><a href="/content/User/user-profile.html" class="link responsiveTab">Profile</a></li>
+        <li><a href="/index.html" class="link responsiveTab">Log out</a></li>
       </ul>
     </div>
     <div class="nav-user">
@@ -49,7 +51,7 @@
             <i class="fa-regular fa-user" style="background: none; color: black;"></i>
             <li>Profile</li>
           </a>
-          <a href="/content/Main/home.html">
+          <a href="/index.html">
             <i class="fa-solid fa-arrow-right-from-bracket" style="background: none; color: black;"></i>
             <li>Log out</li>
           </a>
@@ -61,40 +63,72 @@
     </div>
   </nav>
 
+  <div class="banner">
+    <div class="banner-row">
+      <div class="banner-col col1">
+        <h1>Paw</h1>
+        <p>Empower the meowgic</p>
+        <button type="button" disabled id="startBtn">Start</button>
+      </div>
+      <div class="banner-col col2">
+        <div class="banner-card card1">
+          <h5>Forum</h5>
+        </div>
+        <div class="banner-card card2">
+          <h5>Blog</h5>
+        </div>
+        <div class="banner-card card3">
+          <h5>Shop</h5>
+        </div>
+        <div class="banner-card card4">
+          <h5>Game</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <h1 style="text-align: center; font-family: Jua;">Meowwww</h1>
+
   <div class="container">
+
     <div id="caroseul">
       <input type="radio" name="slider" id="item-1" checked>
       <input type="radio" name="slider" id="item-2">
       <input type="radio" name="slider" id="item-3">
       <div class="cards">
         <label class="card" for="item-1" id="song-1">
-          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class = "imageCaroseul">
+          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class="imageCaroseul">
         </label>
         <label class="card" for="item-2" id="song-2">
-          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class = "imageCaroseul">
+          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class="imageCaroseul">
         </label>
         <label class="card" for="item-3" id="song-3">
-          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class = "imageCaroseul">
+          <img src="https://th.bing.com/th/id/OIP.NKeSRXsSyvzZ9iXQQ9y6GwHaHa?rs=1&pid=ImgDetMain" class="imageCaroseul">
         </label>
       </div>
     </div>
+  </div>
+
+  <div class="container">
+
     <div id="breed">
-      <h1 style="text-align: center;">Raise your cat!</h1>
-      <canvas id ="canvas"></canvas>
-      <div id = "progress_container">
-        <div id = "progress_bar">
+      <h1 style="text-align: center; font-family: Jua;">Raise your cat!</h1>
+      <canvas id="canvas"></canvas>
+      <div id="progress_container">
+        <div id="progress_bar">
         </div>
       </div>
-      <div id = "lower_part">
-        <div id = "countdownContainer">
-          <h1>Countdown Timer</h1>
+      <div id="lower_part">
+        <div id="countdownContainer">
+          <h2>Countdown Timer</h2>
           <div id="timer">00:00:00</div>
         </div>
-        <div id = "levelContainer">
-          <h1>Level</h1>
-          <div id = "levelDisplaying"></div>
+        <div id="levelContainer">
+          <h2>Level</h2>
+          <div id="levelDisplaying"></div>
         </div>
-        <button id = "btn"></button>
+        <button id="btn"></button>
       </div>
     </div>
   </div>
@@ -105,7 +139,7 @@
       <div class="box">
         <figure>
           <a href="#">
-            <img src="/img/whitelogo.png" alt="Logo">
+            <img src="/img/whitelogo.png" alt="logo" class = "nav-logo-img">
           </a>
           <p></p>
         </figure>

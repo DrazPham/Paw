@@ -67,11 +67,11 @@ onAuthStateChanged(auth, async (user) => {
             await updateDoc(doc(db, "users", user.uid), {
                 email: emailInput.value,
                 password: passwordInput.value,
+                bio: bioInput.value,
                 Username: usernameInput.value,
                 UserID: userIDInput.value,
                 phone: phoneInput.value,
                 birthday: birthdayInput.value,
-                bio: bioInput.value,
             });
             currentPasswordInput.value = `${passwordInput.value}`
             
