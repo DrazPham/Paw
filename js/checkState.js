@@ -88,13 +88,16 @@ onAuthStateChanged(auth, async (user) => {
             seconds = seconds < 10 ? "0" + seconds : seconds;
     
             document.getElementById('timer').textContent = hours + ":" + minutes + ":" + seconds;
-            
-            if (timer <= 0) {
+            console.log(timer);
+            if (timer == 1000) {
+                btn.disabled= false;
                 updateDoc(doc(db, "users", uid), {
                     checkBreed: true,
                 });
                 btn.style.backgroundColor = "#d8b49a";
-                btn.disabled= false;
+            }
+
+            if (timer<0) {
                 clearInterval(interval);
                 // Restart the timer for the next day
                 startTimer();
