@@ -1,7 +1,7 @@
 //IMPORT
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+import { getFirestore, doc,collection, setDoc, orderBy,query,getDoc,getDocs, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
 //FIREBASE
 const firebaseConfig = {
@@ -35,6 +35,8 @@ const inputSpace = document.querySelectorAll(".inputSpace");
 
 
 
+
+
 saveChange.disabled = true;
 inputSpace.forEach(e => {
     e.onchange = (event) => {
@@ -48,7 +50,10 @@ onAuthStateChanged(auth, async (user) => {
         const docRef = doc(db, "users", user.uid);
         const docSnap = await getDoc(docRef);
         const data = docSnap.data();
-        console.log(data);
+        // const forumCollection = collection(db, "forum");
+        // const q = query(forumCollection, orderBy("postedTime", "desc"));
+        // const querySnapshot = await getDocs(q);    
+
         usernameInput.value = `${data.Username}`;
         userIDInput.value = `${data.UserID}`;
         emailInput.value = `${data.email}`;
