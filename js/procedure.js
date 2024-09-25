@@ -46,6 +46,7 @@ signUp_button.addEventListener("click", () => {
                     phone: "",
                     birthday:"",
                     bio:"",
+                    date:"",
                 }
                 localStorage.setItem("userID",JSON.stringify(UserInfo))
                 if (role == "admin")
@@ -64,7 +65,8 @@ signUp_button.addEventListener("click", () => {
                     checkBreed: true,
                     level:1,
                     levelTracking:0,
-                    createdAt: new Date()
+                    createdAt: new Date(),
+                    date:"",
                 });
             })
             .catch((error) => {

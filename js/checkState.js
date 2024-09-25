@@ -88,15 +88,6 @@ onAuthStateChanged(auth, async (user) => {
             seconds = seconds < 10 ? "0" + seconds : seconds;
     
             document.getElementById('timer').textContent = hours + ":" + minutes + ":" + seconds;
-            console.log(timer);
-            if (timer == 1000) {
-                btn.disabled= false;
-                updateDoc(doc(db, "users", uid), {
-                    checkBreed: true,
-                });
-                btn.style.backgroundColor = "#d8b49a";
-            }
-
             if (timer<0) {
                 clearInterval(interval);
                 // Restart the timer for the next day
@@ -106,6 +97,16 @@ onAuthStateChanged(auth, async (user) => {
         }, 1000);
         }
         startTimer();
+
+        if (data.date != new Date().getUTCDate())
+            await updateDoc(doc(db, "users", uid), {
+                checkBreed: true
+            });
+        
+        
+        await updateDoc(doc(db, "users", uid), {
+            date: new Date().getUTCDate()
+        });
 
     
         //BUTTON COLOR
